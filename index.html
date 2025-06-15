@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Papa, This One’s for You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- External Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff8f0;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: url('dad-bg.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 2rem;
+    }
+
+    header h1 {
+      background: rgba(0,0,0,0.5);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 2.5rem;
+      font-family: 'Dancing Script', cursive;
+    }
+
+    .scroll-down {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      animation: bounce 1.5s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+      color: #5b3d1b;
+      font-family: 'Dancing Script', cursive;
+    }
+.photo-strip {
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.photo-track {
+  display: flex;
+  gap: 10px;
+  animation: scrollPhotos 40s linear infinite;
+  width: max-content;
+}
+
+.photo-track img {
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* animation */
+@keyframes scrollPhotos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}.photo-strip {
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.photo-track {
+  display: flex;
+  gap: 10px;
+  animation: scrollPhotos 40s linear infinite;
+  width: max-content;
+}
+
+.photo-track img {
+  height: 150px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* animation */
+@keyframes scrollPhotos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+    .timeline, .lessons, .gallery, .open-when {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .timeline-item, .lesson, .open-when-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .letter, .thank-you {
+      background: #fff9e7;
+      padding: 2rem;
+      border-radius: 12px;
+      font-style: italic;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #e0a96d;
+      color: white;
+    }
+
+    .button {
+      background: #5b3d1b;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body onclick="launchCelebration()">
+
+<header>
+  <h1>Happy Father's Day, Papa ❤️</h1>
+  <p class="scroll-down">Scroll Down ↓</p>
+</header>
+
+<section data-aos="fade-up">
+  <h2>📸 Our Journey Together</h2>
+  <div class="timeline">
+    <div class="timeline-item">👶 The day I was born, you held me like your whole world.</div>
+    <div class="timeline-item">🏖️ First vacation, first silly memories — with you by my side.</div>
+    <div class="timeline-item">🎓 My first win, your loudest cheer. You’ve always been proud.</div>
+  </div>
+</section>
+
+<section data-aos="fade-up">
+  <h2>📚 What I Learned From You</h2>
+  <div class="lessons">
+    <div class="lesson">Patience isn’t passive.</div>
+    <div class="lesson">Real strength is silent.</div>
+    <div class="lesson">Always show up — no matter what.</div>
+  </div>
+</section>
+
+<section data-aos="fade-up">
+  <h2>🖼️ Memories</h2>
+  <div class="photo-strip">
+  <div class="photo-track">
+    <img src="photo1.jpg" alt="photo1" />
+    <img src="photo2.jpg" alt="photo2" />
+    <img src="photo3.jpg" alt="photo3" />
+    <img src="photo4.jpg" alt="photo4" />
+    <!-- repeat again to create smooth loop -->
+    <img src="photo1.jpg" alt="photo1" />
+    <img src="photo2.jpg" alt="photo2" />
+    <img src="photo3.jpg" alt="photo3" />
+    <img src="photo4.jpg" alt="photo4" />
+  </div>
+</div>
+</section>
+
+<section data-aos="fade-up">
+  <h2>🎙️ What I Never Told You</h2>
+  <div class="letter">
+    Papa, I notice everything — the sacrifices, the strength, the softness. I love you endlessly.<br><br>
+    <strong>Neelay</strong>
+  </div>
+</section>
+
+<section data-aos="fade-up">
+  <h2>🧡 Thank You Wall</h2>
+  <div class="thank-you">
+    Protector. Provider. Mentor. My first hero. <br>
+    <em>Thank you for being you.</em>
+  </div>
+</section>
+
+<footer>
+  From your <strong>son</strong>, with love 💛<br>
+  <a class="button" href="#">Wanna relive this again?</a>
+</footer>
+
+<script>
+  AOS.init({ duration: 1200 });
+  function launchCelebration() {
+    confetti({ particleCount: 200, spread: 80 });
+    for (let i = 0; i < 3; i++) {
+      setTimeout(() => {
+        confetti({
+          particleCount: 100,
+          angle: 60 + Math.random() * 60,
+          spread: 70,
+          origin: { y: Math.random() * 0.6 }
+        });
+      }, i * 300);
+    }
+  }
+</script>
+</body>
+</html>
